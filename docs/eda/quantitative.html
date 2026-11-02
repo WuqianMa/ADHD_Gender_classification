@@ -1,0 +1,1520 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Which questionnaire features stand out? | WiDS 2025 EDA</title><style>
+:root{--ink:#152e43;--muted:#526777;--accent:#176753;--line:#dae4e8;--paper:#fff;--bg:#f3f6f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 system-ui,-apple-system,sans-serif}
+header,main,footer{max-width:1180px;margin:auto;padding:24px}header{padding-top:44px}nav{display:flex;flex-wrap:wrap;gap:10px}
+a{color:var(--accent);text-underline-offset:3px}nav a,.button{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:white;text-decoration:none}
+nav a[aria-current=page]{background:var(--ink);color:white}h1{font-size:clamp(28px,4vw,44px);line-height:1.15;max-width:950px;margin:24px 0 12px}
+h2{font-size:25px;line-height:1.3;margin:0 0 18px}h3{font-size:20px}p{max-width:950px}.eyebrow{letter-spacing:.1em;font-size:12px;font-weight:700;text-transform:uppercase;color:var(--accent)}
+.subtitle{font-size:20px;color:var(--muted)}.note{background:#e6f1ed;border-left:4px solid var(--accent);padding:16px 20px;border-radius:4px}
+.panel,details{background:var(--paper);padding:26px;border:1px solid var(--line);border-radius:12px;margin-bottom:24px;min-width:0}
+summary{cursor:pointer;font-size:20px;font-weight:650}details[open] summary{margin-bottom:24px}.output{margin:16px 0;overflow-x:auto}
+img{display:block;max-width:100%;height:auto;margin:20px auto}.figure{margin:20px 0}.source{font-size:12px;color:var(--muted)}
+table{border-collapse:collapse;font-size:13px;max-width:100%}td,th{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:#edf3f5}
+pre{font-size:13px;white-space:pre-wrap;overflow-wrap:anywhere}blockquote{margin:12px 0;padding-left:20px;border-left:3px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.cards .panel{display:flex;flex-direction:column}.cards .button{margin-top:auto;align-self:flex-start}
+.plotly-graph-div{max-width:100%}.modebar{opacity:.7}footer{font-size:13px;color:var(--muted)}
+@media(max-width:600px){header,main,footer{padding:18px}.panel,details{padding:16px}.subtitle{font-size:17px}}
+@media print{body{background:white}nav,.modebar{display:none!important}.panel,details{border:0;padding:0}img{max-height:250mm}h2,h3{break-after:avoid}.figure{break-inside:avoid}}
+</style><script src="assets/plotly.min.js"></script></head>
+<body><header><div class="eyebrow">WiDS Datathon 2025 · Original analysis</div><nav aria-label="Report navigation"><a href="index.html">Overview</a><a href="categorical.html">Demographics</a><a href="quantitative.html" aria-current="page">Questionnaires</a><a href="connectome.html">Brain connectivity</a></nav>
+<h1>Which questionnaire features stand out?</h1></header><main><p class="subtitle">Missing values, feature distributions and correlations with the two targets.</p>
+<div class="note">Compare the feature distributions across groups, then inspect the correlation table and heatmap. Correlations here are exploratory associations within the competition sample.</div>
+<section class="panel"><h2>ADHD vs. non-ADHD, split by sex</h2><h4><code>EHQ_EHQ_Total</code> — <em>Laterality Index (Score)</em></h4>
+<h4>Violin Plot for <code>EHQ_EHQ_Total</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-2.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>ColorVision_CV_Score</code> — <em>Color vision test score</em></h4>
+<h4>Violin Plot for <code>ColorVision_CV_Score</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-6.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_CP</code> — <em>Corporal Punishment Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_CP</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-10.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_ID</code> — <em>Inconsistent Discipline Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_ID</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-14.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_INV</code> — <em>Involvement Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_INV</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-18.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_OPD</code> — <em>Other Discipline Practices Score (Not factored into total score but provides item level information)</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_OPD</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-22.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_PM</code> — <em>Poor Monitoring/Supervision Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_PM</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-26.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_PP</code> — <em>Positive Parenting Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_PP</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-30.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Conduct_Problems</code> — <em>Conduct problems scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Conduct_Problems</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-34.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Difficulties_Total</code> — <em>Total Difficulties Score</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Difficulties_Total</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-38.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Emotional_Problems</code> — <em>Emotional Problems Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Emotional_Problems</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-42.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Externalizing</code> — <em>Externalizing Score</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Externalizing</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-46.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Generating_Impact</code> — <em>Generating Impact Scores</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Generating_Impact</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-50.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Hyperactivity</code> — <em>Hyperactivity Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Hyperactivity</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-54.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Internalizing</code> — <em>Internalizing Score</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Internalizing</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-58.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Peer_Problems</code> — <em>Peer Problems Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Peer_Problems</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-62.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Prosocial</code> — <em>Prosocial Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Prosocial</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-66.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<h4><code>MRI_Track_Age_at_Scan</code> — <em>Age at time of MRI scan</em></h4>
+<h4>Violin Plot for <code>MRI_Track_Age_at_Scan</code> (ADHD_Outcome_label × split by Sex_F_label)</h4>
+<img src="assets/cell-83-70.png" alt="Original notebook figure from cell 83" loading="lazy">
+<hr />
+<p class="source">Saved notebook cell 83</p></section>
+<section class="panel"><h2>Female vs. male, split by diagnosis</h2><h4><code>EHQ_EHQ_Total</code> — <em>Laterality Index (Score)</em></h4>
+<h4>Violin Plot for <code>EHQ_EHQ_Total</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-2.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>ColorVision_CV_Score</code> — <em>Color vision test score</em></h4>
+<h4>Violin Plot for <code>ColorVision_CV_Score</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-6.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_CP</code> — <em>Corporal Punishment Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_CP</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-10.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_ID</code> — <em>Inconsistent Discipline Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_ID</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-14.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_INV</code> — <em>Involvement Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_INV</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-18.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_OPD</code> — <em>Other Discipline Practices Score (Not factored into total score but provides item level information)</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_OPD</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-22.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_PM</code> — <em>Poor Monitoring/Supervision Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_PM</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-26.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>APQ_P_APQ_P_PP</code> — <em>Positive Parenting Score</em></h4>
+<h4>Violin Plot for <code>APQ_P_APQ_P_PP</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-30.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Conduct_Problems</code> — <em>Conduct problems scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Conduct_Problems</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-34.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Difficulties_Total</code> — <em>Total Difficulties Score</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Difficulties_Total</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-38.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Emotional_Problems</code> — <em>Emotional Problems Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Emotional_Problems</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-42.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Externalizing</code> — <em>Externalizing Score</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Externalizing</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-46.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Generating_Impact</code> — <em>Generating Impact Scores</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Generating_Impact</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-50.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Hyperactivity</code> — <em>Hyperactivity Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Hyperactivity</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-54.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Internalizing</code> — <em>Internalizing Score</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Internalizing</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-58.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Peer_Problems</code> — <em>Peer Problems Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Peer_Problems</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-62.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>SDQ_SDQ_Prosocial</code> — <em>Prosocial Scale</em></h4>
+<h4>Violin Plot for <code>SDQ_SDQ_Prosocial</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-66.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<h4><code>MRI_Track_Age_at_Scan</code> — <em>Age at time of MRI scan</em></h4>
+<h4>Violin Plot for <code>MRI_Track_Age_at_Scan</code> (Sex_F_label × split by ADHD_Outcome_label)</h4>
+<img src="assets/cell-85-70.png" alt="Original notebook figure from cell 85" loading="lazy">
+<hr />
+<p class="source">Saved notebook cell 85</p></section>
+<section class="panel"><h2>Feature correlations with each target</h2><div class="output"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>feature</th>
+      <th>target</th>
+      <th>pearsonr_r</th>
+      <th>p_value_pearson</th>
+      <th>spearmanr_r</th>
+      <th>p_value_spearman</th>
+      <th>correlation_type</th>
+      <th>strength</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>EHQ_EHQ_Total</td>
+      <td>Sex_F</td>
+      <td>0.000689</td>
+      <td>9.809796e-01</td>
+      <td>-0.027276</td>
+      <td>3.451402e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>EHQ_EHQ_Total</td>
+      <td>ADHD_Outcome</td>
+      <td>0.019770</td>
+      <td>4.938343e-01</td>
+      <td>0.035731</td>
+      <td>2.161386e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ColorVision_CV_Score</td>
+      <td>Sex_F</td>
+      <td>0.106389</td>
+      <td>2.363605e-04</td>
+      <td>0.026919</td>
+      <td>3.535100e-01</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ColorVision_CV_Score</td>
+      <td>ADHD_Outcome</td>
+      <td>-0.023184</td>
+      <td>4.242645e-01</td>
+      <td>-0.006321</td>
+      <td>8.275631e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>APQ_P_APQ_P_CP</td>
+      <td>Sex_F</td>
+      <td>-0.034227</td>
+      <td>2.359102e-01</td>
+      <td>-0.024124</td>
+      <td>4.035640e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>APQ_P_APQ_P_CP</td>
+      <td>ADHD_Outcome</td>
+      <td>0.059494</td>
+      <td>3.925896e-02</td>
+      <td>0.055971</td>
+      <td>5.247510e-02</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>APQ_P_APQ_P_ID</td>
+      <td>Sex_F</td>
+      <td>-0.018703</td>
+      <td>5.172743e-01</td>
+      <td>-0.027369</td>
+      <td>3.433011e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>APQ_P_APQ_P_ID</td>
+      <td>ADHD_Outcome</td>
+      <td>0.124358</td>
+      <td>1.546231e-05</td>
+      <td>0.115642</td>
+      <td>5.895991e-05</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>APQ_P_APQ_P_INV</td>
+      <td>Sex_F</td>
+      <td>-0.064444</td>
+      <td>2.552618e-02</td>
+      <td>-0.059066</td>
+      <td>4.069549e-02</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>APQ_P_APQ_P_INV</td>
+      <td>ADHD_Outcome</td>
+      <td>-0.099289</td>
+      <td>5.693045e-04</td>
+      <td>-0.101296</td>
+      <td>4.383605e-04</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>APQ_P_APQ_P_OPD</td>
+      <td>Sex_F</td>
+      <td>-0.061111</td>
+      <td>3.420856e-02</td>
+      <td>-0.070275</td>
+      <td>1.485558e-02</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>APQ_P_APQ_P_OPD</td>
+      <td>ADHD_Outcome</td>
+      <td>0.141816</td>
+      <td>8.033795e-07</td>
+      <td>0.143217</td>
+      <td>6.235478e-07</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>APQ_P_APQ_P_PM</td>
+      <td>Sex_F</td>
+      <td>-0.006275</td>
+      <td>8.280118e-01</td>
+      <td>0.005689</td>
+      <td>8.438703e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>APQ_P_APQ_P_PM</td>
+      <td>ADHD_Outcome</td>
+      <td>0.025983</td>
+      <td>3.683054e-01</td>
+      <td>0.028674</td>
+      <td>3.207753e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>APQ_P_APQ_P_PP</td>
+      <td>Sex_F</td>
+      <td>-0.070464</td>
+      <td>1.458832e-02</td>
+      <td>-0.057273</td>
+      <td>4.721493e-02</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>APQ_P_APQ_P_PP</td>
+      <td>ADHD_Outcome</td>
+      <td>-0.015570</td>
+      <td>5.898570e-01</td>
+      <td>-0.010592</td>
+      <td>7.138311e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>SDQ_SDQ_Conduct_Problems</td>
+      <td>Sex_F</td>
+      <td>-0.050036</td>
+      <td>8.265766e-02</td>
+      <td>-0.058412</td>
+      <td>4.272022e-02</td>
+      <td>🟡 Non-linear (Spearman)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>SDQ_SDQ_Conduct_Problems</td>
+      <td>ADHD_Outcome</td>
+      <td>0.275598</td>
+      <td>1.991207e-22</td>
+      <td>0.283128</td>
+      <td>1.249032e-23</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>SDQ_SDQ_Difficulties_Total</td>
+      <td>Sex_F</td>
+      <td>-0.045667</td>
+      <td>1.132456e-01</td>
+      <td>-0.051088</td>
+      <td>7.639467e-02</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>SDQ_SDQ_Difficulties_Total</td>
+      <td>ADHD_Outcome</td>
+      <td>0.464724</td>
+      <td>1.540923e-65</td>
+      <td>0.475942</td>
+      <td>4.371737e-69</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>SDQ_SDQ_Emotional_Problems</td>
+      <td>Sex_F</td>
+      <td>0.108491</td>
+      <td>1.621337e-04</td>
+      <td>0.101222</td>
+      <td>4.353524e-04</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>SDQ_SDQ_Emotional_Problems</td>
+      <td>ADHD_Outcome</td>
+      <td>0.205459</td>
+      <td>6.080018e-13</td>
+      <td>0.216942</td>
+      <td>2.728496e-14</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>SDQ_SDQ_Externalizing</td>
+      <td>Sex_F</td>
+      <td>-0.120792</td>
+      <td>2.641184e-05</td>
+      <td>-0.118899</td>
+      <td>3.533648e-05</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>SDQ_SDQ_Externalizing</td>
+      <td>ADHD_Outcome</td>
+      <td>0.514630</td>
+      <td>2.204710e-82</td>
+      <td>0.518822</td>
+      <td>6.268145e-84</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Strong</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>SDQ_SDQ_Generating_Impact</td>
+      <td>Sex_F</td>
+      <td>-0.022311</td>
+      <td>4.392432e-01</td>
+      <td>-0.019960</td>
+      <td>4.889854e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>SDQ_SDQ_Generating_Impact</td>
+      <td>ADHD_Outcome</td>
+      <td>0.410349</td>
+      <td>4.167267e-50</td>
+      <td>0.417394</td>
+      <td>5.966680e-52</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>SDQ_SDQ_Hyperactivity</td>
+      <td>Sex_F</td>
+      <td>-0.141678</td>
+      <td>7.980411e-07</td>
+      <td>-0.137109</td>
+      <td>1.795754e-06</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>SDQ_SDQ_Hyperactivity</td>
+      <td>ADHD_Outcome</td>
+      <td>0.558625</td>
+      <td>9.574992e-100</td>
+      <td>0.548421</td>
+      <td>1.739252e-95</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Strong</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>SDQ_SDQ_Internalizing</td>
+      <td>Sex_F</td>
+      <td>0.057341</td>
+      <td>4.667688e-02</td>
+      <td>0.047864</td>
+      <td>9.690465e-02</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Very weak</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>SDQ_SDQ_Internalizing</td>
+      <td>ADHD_Outcome</td>
+      <td>0.257269</td>
+      <td>1.182310e-19</td>
+      <td>0.274974</td>
+      <td>2.494802e-22</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>SDQ_SDQ_Peer_Problems</td>
+      <td>Sex_F</td>
+      <td>-0.016151</td>
+      <td>5.755576e-01</td>
+      <td>-0.019836</td>
+      <td>4.916907e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>SDQ_SDQ_Peer_Problems</td>
+      <td>ADHD_Outcome</td>
+      <td>0.219253</td>
+      <td>1.429568e-14</td>
+      <td>0.229329</td>
+      <td>7.833385e-16</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>SDQ_SDQ_Prosocial</td>
+      <td>Sex_F</td>
+      <td>0.123535</td>
+      <td>1.719448e-05</td>
+      <td>0.123989</td>
+      <td>1.599971e-05</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>SDQ_SDQ_Prosocial</td>
+      <td>ADHD_Outcome</td>
+      <td>-0.190466</td>
+      <td>2.680410e-11</td>
+      <td>-0.198440</td>
+      <td>3.713774e-12</td>
+      <td>🟢 Linear (Pearson)</td>
+      <td>Weak</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>MRI_Track_Age_at_Scan</td>
+      <td>Sex_F</td>
+      <td>-0.027897</td>
+      <td>4.157972e-01</td>
+      <td>-0.040376</td>
+      <td>2.388008e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>MRI_Track_Age_at_Scan</td>
+      <td>ADHD_Outcome</td>
+      <td>0.011081</td>
+      <td>7.465657e-01</td>
+      <td>0.014441</td>
+      <td>6.736271e-01</td>
+      <td>🔴 No significant correlation</td>
+      <td>No correlation</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+<p class="source">Saved notebook cell 101</p></section>
+<section class="panel"><h2>Correlation between questionnaire features</h2><img src="assets/cell-112-0.png" alt="Original notebook figure from cell 112" loading="lazy">
+<p class="source">Saved notebook cell 112</p></section>
+<details><summary>Recorded observations</summary><h3>Summary</h3>
+<table>
+<thead>
+<tr>
+<th>Feature Name</th>
+<th>ADHD Relation</th>
+<th>Gender Relation</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EHQ_Laterality_Index</code></td>
+<td>No</td>
+<td>No</td>
+<td>Not related to ADHD or gender</td>
+</tr>
+<tr>
+<td><code>ColorVision_Score</code></td>
+<td>No</td>
+<td>No</td>
+<td>Ceiling effect; not useful</td>
+</tr>
+<tr>
+<td><code>APQ_Corporal_Punishment</code></td>
+<td>No</td>
+<td>No</td>
+<td>Unrelated; low variation</td>
+</tr>
+<tr>
+<td><code>APQ_Inconsistent_Discipline</code></td>
+<td>Weak</td>
+<td>No</td>
+<td>Slight ADHD shift</td>
+</tr>
+<tr>
+<td><code>APQ_Parental_Involvement</code></td>
+<td>Weak</td>
+<td>No</td>
+<td>Slightly higher in Non-ADHD</td>
+</tr>
+<tr>
+<td><code>APQ_Other_Discipline</code></td>
+<td>No</td>
+<td>No</td>
+<td>No visible differences</td>
+</tr>
+<tr>
+<td><code>APQ_Poor_Monitoring</code></td>
+<td>Weak</td>
+<td>No</td>
+<td>Slightly broader distribution in ADHD</td>
+</tr>
+<tr>
+<td><code>APQ_Positive_Patienting</code></td>
+<td>No</td>
+<td>No</td>
+<td>Equal across groups</td>
+</tr>
+<tr>
+<td><code>SDQ_Conduct_Problems</code></td>
+<td>Strong</td>
+<td>No</td>
+<td>Clear ADHD signal</td>
+</tr>
+<tr>
+<td><code>SDQ_Total_Difficulties</code></td>
+<td>Strong</td>
+<td>No</td>
+<td>Broad ADHD-related difficulties</td>
+</tr>
+<tr>
+<td><code>SDQ_Emotional_Problems</code></td>
+<td>Moderate</td>
+<td>No</td>
+<td>Internalising symptoms elevated in ADHD</td>
+</tr>
+<tr>
+<td><code>SDQ_Externalizing</code></td>
+<td>Strong</td>
+<td>No</td>
+<td>Most powerful ADHD discriminator</td>
+</tr>
+<tr>
+<td><code>SDQ_Generating_Impact</code></td>
+<td>Strong</td>
+<td>No</td>
+<td>Greater impairment perceived by parents</td>
+</tr>
+<tr>
+<td><code>SDQ_Hyperactivity</code></td>
+<td>Very Strong</td>
+<td>No</td>
+<td>Clearest ADHD-related feature</td>
+</tr>
+<tr>
+<td><code>SDQ_Internalizing</code></td>
+<td>Moderate</td>
+<td>No</td>
+<td>Elevated in ADHD, smaller effect size</td>
+</tr>
+<tr>
+<td><code>SDQ_Peer_Problems</code></td>
+<td>Weak</td>
+<td>No</td>
+<td>ADHD kids struggle more with peers</td>
+</tr>
+<tr>
+<td><code>SDQ_Prosocial</code></td>
+<td>Weak</td>
+<td>No</td>
+<td>Slight reduction in ADHD</td>
+</tr>
+<tr>
+<td><code>Age_at_MRI</code></td>
+<td>No</td>
+<td>No</td>
+<td>Well-balanced; not a confounder</td>
+</tr>
+</tbody>
+</table>
+<h3>Strong ADHD-related Features</h3>
+<ul>
+<li><code>SDQ_Conduct_Problems</code>         → clear behavioural difference</li>
+<li><code>SDQ_Total_Difficulties</code>       → broad multi-domain difference</li>
+<li><code>SDQ_Externalizing</code>            → large gap; excellent discriminator</li>
+<li><code>SDQ_Generating_Impact</code>        → higher perceived impact in ADHD</li>
+<li><code>SDQ_Hyperactivity</code>            → most visually distinct ADHD feature</li>
+</ul>
+<h3>Moderate ADHD-related Features</h3>
+<ul>
+<li><code>SDQ_Emotional_Problems</code>       → elevated internalising symptoms</li>
+<li><code>SDQ_Internalizing</code>            → mix of emotional + peer issues, moderate effect</li>
+</ul>
+<h3>Weak ADHD-related Features</h3>
+<ul>
+<li><code>APQ_Inconsistent_Discipline</code>  → small shift; overlapping curves</li>
+<li><code>APQ_Parental_Involvement</code>     → slightly lower in ADHD</li>
+<li><code>APQ_Poor_Monitoring</code>          → broader distribution in ADHD</li>
+<li><code>SDQ_Peer_Problems</code>            → modest ADHD-linked increase</li>
+<li><code>SDQ_Prosocial</code>                → mildly reduced in ADHD</li>
+</ul>
+<h3>No Observable ADHD Effect</h3>
+<ul>
+<li><code>EHQ_Laterality_Index</code></li>
+<li><code>ColorVision_Score</code></li>
+<li><code>APQ_Corporal_Punishment</code></li>
+<li><code>APQ_Other_Discipline</code></li>
+<li><code>APQ_Positive_Patienting</code></li>
+<li><code>Age_at_MRI</code></li>
+</ul>
+<h3>Summary:</h3>
+<h5><code>ADHD_Outcome</code> and <code>Sex_F</code> are weakly negative correlated and the correlation is statistically signifcant.</h5>
+<h5>If we turn from female(1) to male(0), it might have a slightly tendency to the outcome of ADHD(1).</h5>
+<h5>We can assume these two targets are roughly independant.</h5>
+<hr />
+<h3>Summary of Feature Correlation Matrix (Pearson)</h3>
+<hr />
+<ul>
+<li>
+<p><strong>Major Finding: High Multicollinearity within SDQ Scales</strong></p>
+<ul>
+<li>Many Strengths and Difficulties Questionnaire (SDQ) subscales are <strong>highly correlated</strong> with each other and with the <code>SDQ_Difficulties_Total</code> score. This indicates significant redundancy.</li>
+<li><strong>Examples (|r| &gt; 0.8):</strong><ul>
+<li><code>SDQ_Difficulties_Total</code> vs <code>SDQ_Externalizing</code> (0.88) &amp; <code>SDQ_Internalizing</code> (0.83).</li>
+<li><code>SDQ_Externalizing</code> vs <code>SDQ_Hyperactivity</code> (0.90).</li>
+<li><code>SDQ_Internalizing</code> vs <code>SDQ_Emotional_Problems</code> (0.83) &amp; <code>SDQ_Peer_Problems</code> (0.82).</li>
+</ul>
+</li>
+<li><strong>Implication:</strong> Using highly correlated SDQ subscales together in standard linear models is risky due to multicollinearity. Consider using total/summary scores, selecting specific subscales, or using techniques like PCA.</li>
+</ul>
+</li>
+<li>
+<p><strong>Other Notable Correlations:</strong></p>
+<ul>
+<li><strong>Moderate:</strong> Some moderate correlations exist <em>within</em> APQ scales (e.g., <code>APQ_P_APQ_P_INV</code> vs <code>APQ_P_APQ_P_PP</code>, r=0.56) and between <code>MRI_Track_Age_at_Scan</code> and <code>APQ_P_APQ_P_PM</code> (r=0.57). <code>SDQ_Prosocial</code> has moderate negative correlations with SDQ problem scales.</li>
+<li><strong>Weak:</strong> <code>EHQ_EHQ_Total</code> and <code>ColorVision_CV_Score</code> show weak correlations overall. Most cross-correlations between APQ and SDQ scales are weak to moderate.</li>
+</ul>
+</li>
+<li>
+<p><strong>Overall:</strong> The most critical takeaway for modeling is the need to carefully manage the SDQ features to avoid multicollinearity issues.</p>
+</li>
+</ul>
+<hr />
+<h2><strong>Summary of Quantitative training dataset</strong></h2>
+<hr />
+<h3>1. Dataset Overview</h3>
+<ul>
+<li><strong>Shape:</strong> 1213 rows (participants) and 21 columns.</li>
+<li><strong>Content:</strong> Includes participant ID, EHQ (handedness), Color Vision score, APQ (parenting) subscales, SDQ (strengths/difficulties) subscales, MRI Age at Scan, and binary indicators for <code>ADHD_Outcome</code> and <code>Sex_F</code>.</li>
+</ul>
+<h3>2. Missing Data</h3>
+<ul>
+<li><strong>Significant Issue:</strong> <code>MRI_Track_Age_at_Scan</code> has substantial missing data (360 missing values, ~30% of rows). This requires careful handling (imputation or column removal).</li>
+<li><strong>Minor Issues:</strong> Several other features (EHQ, ColorVision, APQ, SDQ) have a small number of missing values (9-23 each). These likely require simple imputation (e.g., <strong>median</strong>, given potential skewness).</li>
+<li><strong>Overall Impact:</strong> 401 rows (~33%) contain at least one missing value, making listwise deletion (dropping rows) highly problematic due to excessive data loss.</li>
+</ul>
+<h3>3. Target Variable Analysis (<code>ADHD_Outcome</code> &amp; <code>Sex_F</code>)</h3>
+<ul>
+<li><strong>Relationship:</strong> The two variables have a <strong>weak, statistically significant negative correlation</strong> (r ≈ -0.13).</li>
+<li><strong>Interpretation:</strong> Suggests Males (<code>Sex_F=0</code>) have a slightly higher tendency towards <code>ADHD_Outcome=1</code> in this sample compared to Females (<code>Sex_F=1</code>).</li>
+<li><strong>Modeling Implication:</strong> The weak correlation indicates the targets are largely independent; complex multi-output models focusing on target dependency are likely unnecessary.</li>
+</ul>
+<h3>4. Feature Relationships with Targets</h3>
+<ul>
+<li><strong>Predicting <code>ADHD_Outcome</code>:</strong><ul>
+<li><strong>Strongest Associations:</strong> <code>SDQ_Externalizing</code> and <code>SDQ_Hyperactivity</code> show strong positive linear correlations. Violin plots confirm clear distributional separation for these between ADHD/Non-ADHD groups.</li>
+<li><strong>Medium Associations:</strong> <code>SDQ_Difficulties_Total</code> and <code>SDQ_Generating_Impact</code> show medium positive linear correlations and clear distributional differences.</li>
+<li><strong>Weak Associations:</strong> Other SDQ scales (<code>Conduct</code>, <code>Emotional</code>, <code>Internalizing</code>, <code>Peer</code>, <code>Prosocial</code> [negative]) and several APQ scales (<code>CP</code>, <code>ID</code>, <code>INV</code>, <code>OPD</code>) show weak, but often significant, linear correlations. Violin plots show modest differences for these.</li>
+<li><strong>No Significant Correlation:</strong> <code>EHQ_Total</code>, <code>ColorVision_CV_Score</code>, <code>APQ_P_APQ_P_PM</code>, <code>APQ_P_APQ_P_PP</code>, and <code>MRI_Track_Age_at_Scan</code> show no significant linear correlation with <code>ADHD_Outcome</code>. Violin plots confirm minimal distributional difference for these (except perhaps minor trends for APQ).</li>
+</ul>
+</li>
+<li><strong>Predicting <code>Sex_F</code>:</strong><ul>
+<li>Generally <strong>weak or very weak significant linear correlations</strong> observed with several features (e.g., <code>ColorVision</code>, some APQ, some SDQ).</li>
+<li>Violin plots confirm <strong>minimal distributional differences</strong> between males and females for most variables. <code>Sex_F</code> appears difficult to predict well from these features alone.</li>
+</ul>
+</li>
+</ul>
+<h3>5. Feature-Feature Relationships (Multicollinearity)</h3>
+<ul>
+<li><strong>Major Concern:</strong> <strong>High multicollinearity exists within the SDQ scales.</strong><ul>
+<li>Many subscales (<code>Externalizing</code>, <code>Internalizing</code>, <code>Hyperactivity</code>, <code>Emotional</code>, <code>Peer</code>, <code>Conduct</code>) are highly correlated (<code>|r|</code> often &gt; 0.7) with each other and with the <code>SDQ_Difficulties_Total</code> score.</li>
+<li>Particularly high correlations (<code>|r| &gt; 0.8</code>) exist between <code>Difficulties_Total</code> &lt;-&gt; <code>Externalizing</code>/<code>Internalizing</code>; <code>Externalizing</code> &lt;-&gt; <code>Hyperactivity</code>; <code>Internalizing</code> &lt;-&gt; <code>Emotional</code>/<code>Peer</code>.</li>
+</ul>
+</li>
+<li><strong>Moderate Correlations:</strong> Noted between <code>MRI_Track_Age_at_Scan</code> and <code>APQ_P_APQ_P_PM</code> (r=0.57) and within some APQ scales (e.g., <code>INV</code> vs <code>PP</code>, r=0.56).</li>
+<li><strong>Implication:</strong> Including multiple highly correlated SDQ scales simultaneously in standard models (like linear/logistic regression) is problematic. Addressing this redundancy (e.g., using total scores, feature selection, PCA) is crucial.</li>
+</ul>
+<h3>6. Overall Implications for Modeling</h3>
+<ul>
+<li><strong>Missing Data Handling:</strong> Address <code>MRI_Track_Age_at_Scan</code> (likely drop or advanced imputation) and perform minor imputation (likely median) for other features before training most models.</li>
+<li><strong>Address SDQ Multicollinearity:</strong> Do not include all SDQ subscales together naively in sensitive models. Choose summary scores, select a representative subset, or use dimensionality reduction (PCA).</li>
+<li><strong>Feature Relevance (for ADHD_Outcome):</strong> Focus on SDQ scales (especially Externalizing, Hyperactivity, Total) as primary predictors. APQ scales may offer secondary value. EHQ, ColorVision, and Age appear less relevant based on this analysis.</li>
+<li><strong>Model Choice:</strong> Given the largely independent targets, simpler multi-output strategies (like <strong>independent models</strong>) are likely sufficient if predicting both <code>ADHD_Outcome</code> and <code>Sex_F</code>.</li>
+</ul>
+<hr /></details>
+<details><summary>Missing values and descriptive statistics</summary><div class="output"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EHQ_EHQ_Total</th>
+      <th>ColorVision_CV_Score</th>
+      <th>APQ_P_APQ_P_CP</th>
+      <th>APQ_P_APQ_P_ID</th>
+      <th>APQ_P_APQ_P_INV</th>
+      <th>APQ_P_APQ_P_OPD</th>
+      <th>APQ_P_APQ_P_PM</th>
+      <th>APQ_P_APQ_P_PP</th>
+      <th>SDQ_SDQ_Conduct_Problems</th>
+      <th>SDQ_SDQ_Difficulties_Total</th>
+      <th>SDQ_SDQ_Emotional_Problems</th>
+      <th>SDQ_SDQ_Externalizing</th>
+      <th>SDQ_SDQ_Generating_Impact</th>
+      <th>SDQ_SDQ_Hyperactivity</th>
+      <th>SDQ_SDQ_Internalizing</th>
+      <th>SDQ_SDQ_Peer_Problems</th>
+      <th>SDQ_SDQ_Prosocial</th>
+      <th>MRI_Track_Age_at_Scan</th>
+      <th>ADHD_Outcome</th>
+      <th>Sex_F</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1200.000000</td>
+      <td>1190.000000</td>
+      <td>1201.000000</td>
+      <td>1201.000000</td>
+      <td>1201.000000</td>
+      <td>1201.000000</td>
+      <td>1201.000000</td>
+      <td>1201.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>1204.000000</td>
+      <td>853.000000</td>
+      <td>1213.000000</td>
+      <td>1213.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>59.514750</td>
+      <td>13.419328</td>
+      <td>3.819317</td>
+      <td>13.337219</td>
+      <td>39.767694</td>
+      <td>17.963364</td>
+      <td>16.557036</td>
+      <td>25.498751</td>
+      <td>2.074751</td>
+      <td>12.213455</td>
+      <td>2.324751</td>
+      <td>7.613787</td>
+      <td>4.103821</td>
+      <td>5.539037</td>
+      <td>4.599668</td>
+      <td>2.274917</td>
+      <td>7.740864</td>
+      <td>11.245678</td>
+      <td>0.685078</td>
+      <td>0.342951</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>49.744631</td>
+      <td>2.112830</td>
+      <td>1.330348</td>
+      <td>3.593562</td>
+      <td>4.872729</td>
+      <td>3.333965</td>
+      <td>5.146548</td>
+      <td>3.053720</td>
+      <td>2.022992</td>
+      <td>6.517330</td>
+      <td>2.166399</td>
+      <td>4.130399</td>
+      <td>2.808079</td>
+      <td>2.807063</td>
+      <td>3.510469</td>
+      <td>2.089041</td>
+      <td>2.094832</td>
+      <td>3.234372</td>
+      <td>0.464676</td>
+      <td>0.474891</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-100.000000</td>
+      <td>0.000000</td>
+      <td>2.000000</td>
+      <td>5.000000</td>
+      <td>23.000000</td>
+      <td>7.000000</td>
+      <td>5.000000</td>
+      <td>13.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>46.670000</td>
+      <td>14.000000</td>
+      <td>3.000000</td>
+      <td>11.000000</td>
+      <td>36.000000</td>
+      <td>16.000000</td>
+      <td>13.000000</td>
+      <td>23.000000</td>
+      <td>0.000000</td>
+      <td>7.000000</td>
+      <td>1.000000</td>
+      <td>5.000000</td>
+      <td>2.000000</td>
+      <td>4.000000</td>
+      <td>2.000000</td>
+      <td>0.000000</td>
+      <td>6.000000</td>
+      <td>8.803901</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>77.800000</td>
+      <td>14.000000</td>
+      <td>3.000000</td>
+      <td>13.000000</td>
+      <td>40.000000</td>
+      <td>18.000000</td>
+      <td>16.000000</td>
+      <td>26.000000</td>
+      <td>2.000000</td>
+      <td>12.000000</td>
+      <td>2.000000</td>
+      <td>8.000000</td>
+      <td>4.000000</td>
+      <td>6.000000</td>
+      <td>4.000000</td>
+      <td>2.000000</td>
+      <td>8.000000</td>
+      <td>10.739219</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>94.470000</td>
+      <td>14.000000</td>
+      <td>4.000000</td>
+      <td>16.000000</td>
+      <td>43.000000</td>
+      <td>20.000000</td>
+      <td>19.000000</td>
+      <td>28.000000</td>
+      <td>3.000000</td>
+      <td>17.000000</td>
+      <td>4.000000</td>
+      <td>10.000000</td>
+      <td>6.000000</td>
+      <td>8.000000</td>
+      <td>7.000000</td>
+      <td>4.000000</td>
+      <td>10.000000</td>
+      <td>13.460871</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>100.000000</td>
+      <td>14.000000</td>
+      <td>12.000000</td>
+      <td>28.000000</td>
+      <td>50.000000</td>
+      <td>28.000000</td>
+      <td>37.000000</td>
+      <td>30.000000</td>
+      <td>10.000000</td>
+      <td>34.000000</td>
+      <td>10.000000</td>
+      <td>20.000000</td>
+      <td>10.000000</td>
+      <td>10.000000</td>
+      <td>17.000000</td>
+      <td>9.000000</td>
+      <td>10.000000</td>
+      <td>21.564453</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+<p class="source">Saved notebook cell 64</p>
+<h3>If keep all the <code>MRI_Track_Age_at_Scan</code> feature</h3>
+<h4>This is the infos of the <strong>total</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(1213, 21)</pre>
+<p>Missing values count</p>
+<pre>participant_id                  0
+EHQ_EHQ_Total                  13
+ColorVision_CV_Score           23
+APQ_P_APQ_P_CP                 12
+APQ_P_APQ_P_ID                 12
+APQ_P_APQ_P_INV                12
+APQ_P_APQ_P_OPD                12
+APQ_P_APQ_P_PM                 12
+APQ_P_APQ_P_PP                 12
+SDQ_SDQ_Conduct_Problems        9
+SDQ_SDQ_Difficulties_Total      9
+SDQ_SDQ_Emotional_Problems      9
+SDQ_SDQ_Externalizing           9
+SDQ_SDQ_Generating_Impact       9
+SDQ_SDQ_Hyperactivity           9
+SDQ_SDQ_Internalizing           9
+SDQ_SDQ_Peer_Problems           9
+SDQ_SDQ_Prosocial               9
+MRI_Track_Age_at_Scan         360
+ADHD_Outcome                    0
+Sex_F                           0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>1213</strong></p>
+<p>Number of rows with missing values:  <strong>401</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>33.06%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>adhd-female</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(250, 21)</pre>
+<p>Missing values count</p>
+<pre>participant_id                 0
+EHQ_EHQ_Total                  3
+ColorVision_CV_Score           4
+APQ_P_APQ_P_CP                 3
+APQ_P_APQ_P_ID                 3
+APQ_P_APQ_P_INV                3
+APQ_P_APQ_P_OPD                3
+APQ_P_APQ_P_PM                 3
+APQ_P_APQ_P_PP                 3
+SDQ_SDQ_Conduct_Problems       2
+SDQ_SDQ_Difficulties_Total     2
+SDQ_SDQ_Emotional_Problems     2
+SDQ_SDQ_Externalizing          2
+SDQ_SDQ_Generating_Impact      2
+SDQ_SDQ_Hyperactivity          2
+SDQ_SDQ_Internalizing          2
+SDQ_SDQ_Peer_Problems          2
+SDQ_SDQ_Prosocial              2
+MRI_Track_Age_at_Scan         76
+ADHD_Outcome                   0
+Sex_F                          0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>250</strong></p>
+<p>Number of rows with missing values:  <strong>86</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>34.40%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>adhd-male</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(581, 21)</pre>
+<p>Missing values count</p>
+<pre>participant_id                  0
+EHQ_EHQ_Total                   7
+ColorVision_CV_Score            9
+APQ_P_APQ_P_CP                  3
+APQ_P_APQ_P_ID                  3
+APQ_P_APQ_P_INV                 3
+APQ_P_APQ_P_OPD                 3
+APQ_P_APQ_P_PM                  3
+APQ_P_APQ_P_PP                  3
+SDQ_SDQ_Conduct_Problems        2
+SDQ_SDQ_Difficulties_Total      2
+SDQ_SDQ_Emotional_Problems      2
+SDQ_SDQ_Externalizing           2
+SDQ_SDQ_Generating_Impact       2
+SDQ_SDQ_Hyperactivity           2
+SDQ_SDQ_Internalizing           2
+SDQ_SDQ_Peer_Problems           2
+SDQ_SDQ_Prosocial               2
+MRI_Track_Age_at_Scan         175
+ADHD_Outcome                    0
+Sex_F                           0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>581</strong></p>
+<p>Number of rows with missing values:  <strong>189</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>32.53%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>none-female</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(166, 21)</pre>
+<p>Missing values count</p>
+<pre>participant_id                 0
+EHQ_EHQ_Total                  2
+ColorVision_CV_Score           4
+APQ_P_APQ_P_CP                 3
+APQ_P_APQ_P_ID                 3
+APQ_P_APQ_P_INV                3
+APQ_P_APQ_P_OPD                3
+APQ_P_APQ_P_PM                 3
+APQ_P_APQ_P_PP                 3
+SDQ_SDQ_Conduct_Problems       2
+SDQ_SDQ_Difficulties_Total     2
+SDQ_SDQ_Emotional_Problems     2
+SDQ_SDQ_Externalizing          2
+SDQ_SDQ_Generating_Impact      2
+SDQ_SDQ_Hyperactivity          2
+SDQ_SDQ_Internalizing          2
+SDQ_SDQ_Peer_Problems          2
+SDQ_SDQ_Prosocial              2
+MRI_Track_Age_at_Scan         48
+ADHD_Outcome                   0
+Sex_F                          0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>166</strong></p>
+<p>Number of rows with missing values:  <strong>56</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>33.73%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>none-male</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(216, 21)</pre>
+<p>Missing values count</p>
+<pre>participant_id                 0
+EHQ_EHQ_Total                  1
+ColorVision_CV_Score           6
+APQ_P_APQ_P_CP                 3
+APQ_P_APQ_P_ID                 3
+APQ_P_APQ_P_INV                3
+APQ_P_APQ_P_OPD                3
+APQ_P_APQ_P_PM                 3
+APQ_P_APQ_P_PP                 3
+SDQ_SDQ_Conduct_Problems       3
+SDQ_SDQ_Difficulties_Total     3
+SDQ_SDQ_Emotional_Problems     3
+SDQ_SDQ_Externalizing          3
+SDQ_SDQ_Generating_Impact      3
+SDQ_SDQ_Hyperactivity          3
+SDQ_SDQ_Internalizing          3
+SDQ_SDQ_Peer_Problems          3
+SDQ_SDQ_Prosocial              3
+MRI_Track_Age_at_Scan         61
+ADHD_Outcome                   0
+Sex_F                          0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>216</strong></p>
+<p>Number of rows with missing values:  <strong>70</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>32.41%</strong></p>
+<hr />
+<p class="source">Saved notebook cell 70</p>
+<h3>If we drop <code>MRI_Track_Age_at_Scan</code></h3>
+<h4>This is the infos of the <strong>total</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(1213, 20)</pre>
+<p>Missing values count</p>
+<pre>participant_id                 0
+EHQ_EHQ_Total                 13
+ColorVision_CV_Score          23
+APQ_P_APQ_P_CP                12
+APQ_P_APQ_P_ID                12
+APQ_P_APQ_P_INV               12
+APQ_P_APQ_P_OPD               12
+APQ_P_APQ_P_PM                12
+APQ_P_APQ_P_PP                12
+SDQ_SDQ_Conduct_Problems       9
+SDQ_SDQ_Difficulties_Total     9
+SDQ_SDQ_Emotional_Problems     9
+SDQ_SDQ_Externalizing          9
+SDQ_SDQ_Generating_Impact      9
+SDQ_SDQ_Hyperactivity          9
+SDQ_SDQ_Internalizing          9
+SDQ_SDQ_Peer_Problems          9
+SDQ_SDQ_Prosocial              9
+ADHD_Outcome                   0
+Sex_F                          0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>1213</strong></p>
+<p>Number of rows with missing values:  <strong>54</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>4.45%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>adhd-female</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(250, 20)</pre>
+<p>Missing values count</p>
+<pre>participant_id                0
+EHQ_EHQ_Total                 3
+ColorVision_CV_Score          4
+APQ_P_APQ_P_CP                3
+APQ_P_APQ_P_ID                3
+APQ_P_APQ_P_INV               3
+APQ_P_APQ_P_OPD               3
+APQ_P_APQ_P_PM                3
+APQ_P_APQ_P_PP                3
+SDQ_SDQ_Conduct_Problems      2
+SDQ_SDQ_Difficulties_Total    2
+SDQ_SDQ_Emotional_Problems    2
+SDQ_SDQ_Externalizing         2
+SDQ_SDQ_Generating_Impact     2
+SDQ_SDQ_Hyperactivity         2
+SDQ_SDQ_Internalizing         2
+SDQ_SDQ_Peer_Problems         2
+SDQ_SDQ_Prosocial             2
+ADHD_Outcome                  0
+Sex_F                         0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>250</strong></p>
+<p>Number of rows with missing values:  <strong>11</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>4.40%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>adhd-male</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(581, 20)</pre>
+<p>Missing values count</p>
+<pre>participant_id                0
+EHQ_EHQ_Total                 7
+ColorVision_CV_Score          9
+APQ_P_APQ_P_CP                3
+APQ_P_APQ_P_ID                3
+APQ_P_APQ_P_INV               3
+APQ_P_APQ_P_OPD               3
+APQ_P_APQ_P_PM                3
+APQ_P_APQ_P_PP                3
+SDQ_SDQ_Conduct_Problems      2
+SDQ_SDQ_Difficulties_Total    2
+SDQ_SDQ_Emotional_Problems    2
+SDQ_SDQ_Externalizing         2
+SDQ_SDQ_Generating_Impact     2
+SDQ_SDQ_Hyperactivity         2
+SDQ_SDQ_Internalizing         2
+SDQ_SDQ_Peer_Problems         2
+SDQ_SDQ_Prosocial             2
+ADHD_Outcome                  0
+Sex_F                         0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>581</strong></p>
+<p>Number of rows with missing values:  <strong>21</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>3.61%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>none-female</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(166, 20)</pre>
+<p>Missing values count</p>
+<pre>participant_id                0
+EHQ_EHQ_Total                 2
+ColorVision_CV_Score          4
+APQ_P_APQ_P_CP                3
+APQ_P_APQ_P_ID                3
+APQ_P_APQ_P_INV               3
+APQ_P_APQ_P_OPD               3
+APQ_P_APQ_P_PM                3
+APQ_P_APQ_P_PP                3
+SDQ_SDQ_Conduct_Problems      2
+SDQ_SDQ_Difficulties_Total    2
+SDQ_SDQ_Emotional_Problems    2
+SDQ_SDQ_Externalizing         2
+SDQ_SDQ_Generating_Impact     2
+SDQ_SDQ_Hyperactivity         2
+SDQ_SDQ_Internalizing         2
+SDQ_SDQ_Peer_Problems         2
+SDQ_SDQ_Prosocial             2
+ADHD_Outcome                  0
+Sex_F                         0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>166</strong></p>
+<p>Number of rows with missing values:  <strong>9</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>5.42%</strong></p>
+<hr />
+<h4>This is the infos of the <strong>none-male</strong> subgroup:</h4>
+<p>The shape is : </p>
+<pre>(216, 20)</pre>
+<p>Missing values count</p>
+<pre>participant_id                0
+EHQ_EHQ_Total                 1
+ColorVision_CV_Score          6
+APQ_P_APQ_P_CP                3
+APQ_P_APQ_P_ID                3
+APQ_P_APQ_P_INV               3
+APQ_P_APQ_P_OPD               3
+APQ_P_APQ_P_PM                3
+APQ_P_APQ_P_PP                3
+SDQ_SDQ_Conduct_Problems      3
+SDQ_SDQ_Difficulties_Total    3
+SDQ_SDQ_Emotional_Problems    3
+SDQ_SDQ_Externalizing         3
+SDQ_SDQ_Generating_Impact     3
+SDQ_SDQ_Hyperactivity         3
+SDQ_SDQ_Internalizing         3
+SDQ_SDQ_Peer_Problems         3
+SDQ_SDQ_Prosocial             3
+ADHD_Outcome                  0
+Sex_F                         0
+dtype: int64</pre>
+<p>Number of rows:
+ <strong>216</strong></p>
+<p>Number of rows with missing values:  <strong>13</strong></p>
+<p>Percentage of rows to be imputed or dropped: <strong>6.02%</strong></p>
+<hr />
+<p class="source">Saved notebook cell 73</p></details>
+<details><summary>How to read the correlations</summary><h3>r (correlation coefficient)</h3>
+<ul>
+<li><code>r</code> is a <strong>number between -1 and 1</strong>.</li>
+<li>It measures <strong>how strong</strong> and <strong>in what direction</strong> two variables move together.</li>
+</ul>
+<p><strong>Interpretation of r:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">r value</th>
+<th style="text-align: left;">Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">close to 1</td>
+<td style="text-align: left;">strong positive correlation (both go up together)</td>
+</tr>
+<tr>
+<td style="text-align: left;">close to -1</td>
+<td style="text-align: left;">strong negative correlation (one goes up, other goes down)</td>
+</tr>
+<tr>
+<td style="text-align: left;">close to 0</td>
+<td style="text-align: left;">little or no linear correlation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+- r = 0.8 → strong positive relationship
+- r = -0.7 → strong negative relationship
+- r = 0.05 → almost no relationship</p>
+<p>✅ <strong>Pearson r</strong> measures <strong>linear</strong> relationship.<br />
+✅ <strong>Spearman r</strong> (often called rho) measures <strong>monotonic</strong> relationship (not necessarily straight-line).</p>
+<hr />
+<h3>p (p-value)</h3>
+<ul>
+<li><code>p</code> is a <strong>probability</strong>.</li>
+<li>It tells you whether the correlation you observed might just be <strong>random</strong>.</li>
+</ul>
+<p><strong>Interpretation of p-value:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">p value</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">p &lt; 0.05</td>
+<td style="text-align: left;">statistically significant (the correlation is probably real)</td>
+</tr>
+<tr>
+<td style="text-align: left;">p &gt;= 0.05</td>
+<td style="text-align: left;">not statistically significant (could be just random noise)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong>
+- p = 0.001 → very significant (very unlikely due to chance)
+- p = 0.25 → not significant (could just be randomness)</p>
+<p>✅ Small p-value means you can <strong>trust</strong> the r you calculated.<br />
+✅ Big p-value means you <strong>cannot trust</strong> the r — could be random.</p>
+<hr />
+<h3>Simple way to remember:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Think of it like...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>r</strong></td>
+<td style="text-align: left;">How <em>strong</em> and <em>which way</em> they move together</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>p</strong></td>
+<td style="text-align: left;">How <em>confident</em> we are that this is not by random luck</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Quick check:</h3>
+<ul>
+<li>If <strong>p &lt; 0.05</strong> → check r:</li>
+<li>r &gt; 0 → positive relationship</li>
+<li>r &lt; 0 → negative relationship</li>
+<li>If <strong>p &gt;= 0.05</strong> → no significant relationship (ignore r)</li>
+</ul>
+<hr />
+<h3>Pearson (Linear) vs. Spearman (Monotonic)</h3>
+<p>When analyzing relationships between two variables, correlation coefficients help us quantify the strength and direction of their association. Two of the most common types are Pearson's <code>r</code> and Spearman's <code>rho</code> (<code>rs</code>). </p>
+<p>While both range from -1 (perfect negative association) to +1 (perfect positive association), they measure different <em>types</em> of relationships.</p>
+<h3>Pearson Correlation (<code>r</code>): The Linear Specialist</h3>
+<ul>
+<li><strong>What it measures:</strong> The strength and direction of a <strong>linear</strong> relationship.</li>
+<li><strong>Think:</strong> How well do the data points fit onto a <strong>straight line</strong>?</li>
+<li><strong>How it works:</strong> Uses the actual numerical values of the variables.</li>
+<li><strong>Key takeaway:</strong> Pearson <code>r</code> is high (close to 1 or -1) only when the variables change together at a <em>constant rate</em>, forming a straight line pattern in a scatter plot. It's sensitive to outliers.</li>
+</ul>
+<h3>Spearman Rank Correlation (<code>rho</code> or <code>rs</code>): The Monotonic Specialist</h3>
+<ul>
+<li><strong>What it measures:</strong> The strength and direction of a <strong>monotonic</strong> relationship.</li>
+<li><strong>Think:</strong> As one variable increases, does the other variable <strong>consistently increase</strong> OR <strong>consistently decrease</strong>, even if <strong>not in a straight line</strong>? It's about the <strong>consistent direction</strong> of the relationship.</li>
+<li><strong>How it works:</strong> It doesn't use the actual values. Instead, it converts the values to <strong>ranks</strong> within each variable and then calculates the Pearson correlation on those ranks. This focuses purely on the order and consistency of change.</li>
+<li><strong>Key takeaway:</strong> Spearman <code>rho</code> can be high even if the relationship is curved, as long as it's consistently increasing or decreasing. It's robust to outliers and doesn't require a linear pattern.</li>
+</ul>
+<h3>Linear vs. Monotonic (Non-Linear)</h3>
+<p>The term "non-linear" can be broad. Spearman specifically looks for <strong>monotonic</strong> relationships, which are a <em>subset</em> of non-linear relationships. </p>
+<ul>
+<li>
+<p><strong>Linear Relationship:</strong></p>
+<ul>
+<li>Data follows a straight line.</li>
+<li><em>Detected strongly by:</em> <strong>Pearson</strong> and <strong>Spearman</strong> (a straight line is also monotonic).</li>
+</ul>
+</li>
+<li>
+<p><strong>Monotonic Non-Linear Relationship:</strong></p>
+<ul>
+<li>Data follows a trend that is <em>consistently</em> increasing or <em>consistently</em> decreasing, but it's <em>curved</em>.</li>
+<li><em>Example:</em> An exponential growth curve ($y = e^x$ for x&gt;0) - always goes up, but gets steeper.</li>
+<li><em>Detected strongly by:</em> <strong>Spearman</strong>. Pearson might be moderate or low depending on how much it deviates from a straight line.</li>
+</ul>
+</li>
+<li>
+<p><strong>Non-Monotonic Non-Linear Relationship:</strong></p>
+<ul>
+<li>Data follows a pattern, but the trend <em>changes direction</em>.</li>
+<li><em>Example:</em> A U-shape ($y = x^2$) or a wave pattern ($y = \sin(x)$).</li>
+<li><em>Detected strongly by:</em> <strong>Neither Pearson nor Spearman</strong> might show a strong correlation here, as the overall direction isn't consistent. Specialized methods might be needed to capture these.</li>
+</ul>
+</li>
+</ul>
+<p><strong>summary:</strong></p>
+<ul>
+<li>Use <strong>Pearson <code>r</code></strong> when you specifically want to know about the <em>straight-line</em> relationship.</li>
+<li>Use <strong>Spearman <code>rho</code></strong> when you want to know if variables tend to move in the <em>same relative direction</em> (consistently increasing or decreasing), regardless of whether the pattern forms a straight line.</li>
+</ul>
+<p><strong>exemple</strong>:
+<img alt="image.png" src="attachment:1c5025a0-ae96-41e8-a84c-46bcc3cf55d0.png" />!</p></details></main>
+<footer>Source: the saved 2025 hackathon notebook. Reports export recorded outputs; no analysis or training cells were re-executed.
+<br>Exploratory group comparisons describe this competition sample. The original notebook contains the complete code and historical notes.</footer></body></html>

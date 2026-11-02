@@ -1,0 +1,3 @@
+# Export saved notebook outputs; no training dependencies are needed.
+Markdown>=3.5
+plotly>=5.18,<6

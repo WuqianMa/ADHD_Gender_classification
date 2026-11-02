@@ -1,0 +1,62 @@
+{
+  "source_notebook": "full-stack-adhd-classifier-ml-dl-graph-learnin.ipynb",
+  "source": "saved notebook outputs (2025)",
+  "reports": {
+    "categorical": {
+      "notebook_cells": [
+        46,
+        56,
+        47,
+        57,
+        58,
+        42,
+        50,
+        26
+      ]
+    },
+    "quantitative": {
+      "notebook_cells": [
+        83,
+        85,
+        101,
+        112,
+        86,
+        87,
+        108,
+        113,
+        114,
+        64,
+        70,
+        73,
+        90,
+        91
+      ]
+    },
+    "connectome": {
+      "notebook_cells": [
+        175,
+        176,
+        180,
+        181,
+        182,
+        183,
+        186,
+        191,
+        192,
+        200,
+        204,
+        214,
+        216,
+        184,
+        187,
+        193,
+        201,
+        205,
+        215,
+        217,
+        163,
+        178
+      ]
+    }
+  }
+}
