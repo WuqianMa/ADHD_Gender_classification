@@ -1,0 +1,4 @@
+-r train.txt
+# Install the PyTorch build appropriate for your GPU/driver before this file.
+torch>=2.2
+torch-geometric>=2.5

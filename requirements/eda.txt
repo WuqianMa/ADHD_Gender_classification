@@ -1,0 +1,6 @@
+-r base.txt
+matplotlib>=3.7
+seaborn>=0.13
+plotly>=5.18,<6
+networkx>=3.0
+python-louvain>=0.16
