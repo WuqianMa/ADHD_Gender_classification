@@ -3,8 +3,7 @@
 My 2025 hackathon project exploring **questionnaire scores, demographics and
 functional brain connectivity** to predict ADHD diagnosis and participant sex.
 
-**Start with the [EDA presentation](docs/eda/index.html)** to explore the analysis,
-or go to the [model training guide](docs/training.md) to run the models.
+**[View the EDA reports directly in your browser (GitHub Pages)](https://wuqianma.github.io/adhd-eda/)** — no download, Python, or notebook execution required. The HTML reports are hosted alongside my portfolio and link back to this repository. See the [model training guide](docs/training.md) to reproduce the models.
 
 ## 1. Explore the analysis
 
@@ -14,17 +13,14 @@ You do not need the competition data, a Python environment or a GPU to view them
 
 | Report | What you will see | HTML file |
 | --- | --- | --- |
-| **Overview** | Choose a report and navigate the presentation | [Open overview](docs/eda/index.html) |
-| **Demographics** | Category distributions and sex/diagnosis group breakdowns | [Categorical EDA](docs/eda/categorical.html) |
-| **Questionnaires** | Missing values, distributions and feature correlations | [Quantitative EDA](docs/eda/quantitative.html) |
-| **Brain connectivity** | Difference heatmaps, interactive networks and communities | [Connectome EDA](docs/eda/connectome.html) |
+| **Overview** | Choose a report and navigate the presentation | [View live](https://wuqianma.github.io/adhd-eda/) · [HTML source](docs/eda/index.html) |
+| **Demographics** | Category distributions and sex/diagnosis group breakdowns | [View live](https://wuqianma.github.io/adhd-eda/categorical.html) · [HTML source](docs/eda/categorical.html) |
+| **Questionnaires** | Missing values, distributions and feature correlations | [View live](https://wuqianma.github.io/adhd-eda/quantitative.html) · [HTML source](docs/eda/quantitative.html) |
+| **Brain connectivity** | Difference heatmaps, interactive networks and communities | [View live](https://wuqianma.github.io/adhd-eda/connectome.html) · [HTML source](docs/eda/connectome.html) |
 
-**To present:** [download the project ZIP](https://github.com/WuqianMa/ADHD_Gender_classification/archive/refs/heads/main.zip),
-extract it, and open `docs/eda/index.html` in your browser. Keep the `assets/`
-folder beside the HTML files; the charts also work offline.
+**Live presentation:** Open the [GitHub Pages EDA viewer](https://wuqianma.github.io/adhd-eda/) and follow the report navigation. The copied HTML is served as a real web page, not as source-code text in GitHub's file viewer. Static PNG figures are read from this public repository; interactive Plotly figures load the bundled library through the jsDelivr GitHub mirror, so the online presentation requires an internet connection.
 
-GitHub displays HTML source in its file viewer. If you already cloned the
-project, you can also serve the reports locally:
+**Offline presentation:** [Download the project ZIP](https://github.com/WuqianMa/ADHD_Gender_classification/archive/refs/heads/main.zip), extract it, and open `docs/eda/index.html` locally. Keep the `assets/` folder next to the HTML files for offline charts. Alternatively, after cloning the project, serve the original complete reports locally:
 
 ```bash
 python3 -m http.server 8000 --directory docs
